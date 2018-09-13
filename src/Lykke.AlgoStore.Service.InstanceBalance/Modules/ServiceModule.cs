@@ -1,7 +1,10 @@
 ﻿using Autofac;
 using Lykke.AlgoStore.CSharp.AlgoTemplate.Models;
+using Lykke.AlgoStore.Service.InstanceBalance.Domain.Services;
+using Lykke.AlgoStore.Service.InstanceBalance.DomainServices;
 using Lykke.AlgoStore.Service.InstanceBalance.Extensions;
 using Lykke.AlgoStore.Service.InstanceBalance.Settings;
+using Lykke.Service.Balances.Client;
 using Lykke.SettingsReader;
 
 namespace Lykke.AlgoStore.Service.InstanceBalance.Modules
@@ -22,6 +25,11 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.Modules
 
             builder.RegisterRepository(log =>
                 AzureRepoFactories.CreateAlgoClientInstanceRepository(dbConnString, log.CreateLog(this)));
+
+            builder.RegisterType<WalletBalanceService>()
+                .As<IWalletBalanceService>();
+
+            builder.RegisterBalancesClient(_appSettings.CurrentValue.BalancesServiceClient);
         }
     }
 }

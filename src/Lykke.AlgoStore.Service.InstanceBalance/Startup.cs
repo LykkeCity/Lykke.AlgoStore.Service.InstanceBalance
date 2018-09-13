@@ -12,6 +12,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Lykke.AlgoStore.CSharp.AlgoTemplate.Models.Mapper;
+using Lykke.AlgoStore.Service.InstanceBalance.DomainServices;
 
 namespace Lykke.AlgoStore.Service.InstanceBalance
 {
@@ -29,6 +30,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance
             Mapper.Initialize(cfg =>
             {
                 cfg.AddProfile<AutoMapperModelProfile>();
+                cfg.AddProfile<ServicesMapperProfile>();
             });
         }
 

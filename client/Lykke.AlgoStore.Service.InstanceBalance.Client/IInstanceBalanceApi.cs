@@ -1,5 +1,8 @@
 ﻿using JetBrains.Annotations;
+using Lykke.AlgoStore.Service.InstanceBalance.Client.Models;
 using Refit;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Lykke.AlgoStore.Service.InstanceBalance.Client
 {
@@ -12,5 +15,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.Client
     [PublicAPI]
     public interface IInstanceBalanceApi
     {
+        [Post("/api/v1/balances")]
+        Task<IEnumerable<WalletBalanceModel>> GetBalancesAsync([Header("Authorization")] string authToken);
     }
 }

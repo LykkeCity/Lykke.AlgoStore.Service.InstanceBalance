@@ -13,11 +13,14 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.Client
     public static class AutofacExtension
     {
         /// <summary>
-        /// Registers <see cref="IInstanceBalanceClient"/> in Autofac container using <see cref="InstanceBalanceServiceClientSettings"/>.
+        /// Registers <see cref="IInstanceBalanceClient"/> in Autofac
+        /// container using <see cref="InstanceBalanceServiceClientSettings"/>.
         /// </summary>
         /// <param name="builder">Autofac container builder.</param>
         /// <param name="settings">InstanceBalance client settings.</param>
-        /// <param name="builderConfigure">Optional <see cref="HttpClientGeneratorBuilder"/> configure handler.</param>
+        /// <param name="builderConfigure">
+        /// Optional <see cref="HttpClientGeneratorBuilder"/> configure handler.
+        /// </param>
         public static void RegisterInstanceBalanceClient(
             [NotNull] this ContainerBuilder builder,
             [NotNull] InstanceBalanceServiceClientSettings settings,
@@ -28,7 +31,8 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.Client
             if (settings == null)
                 throw new ArgumentNullException(nameof(settings));
             if (string.IsNullOrWhiteSpace(settings.ServiceUrl))
-                throw new ArgumentException("Value cannot be null or whitespace.", nameof(InstanceBalanceServiceClientSettings.ServiceUrl));
+                throw new ArgumentException("Value cannot be null or whitespace.", 
+                    nameof(InstanceBalanceServiceClientSettings.ServiceUrl));
 
             var clientBuilder = HttpClientGenerator.HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
                 .WithAdditionalCallsWrapper(new ExceptionHandlerCallsWrapper());

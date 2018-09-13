@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using Lykke.Sdk.Settings;
+using Lykke.Service.Balances.Client;
 
 namespace Lykke.AlgoStore.Service.InstanceBalance.Settings
 {
@@ -7,5 +8,6 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.Settings
     public class AppSettings : BaseAppSettings
     {
         public AlgoInstanceBalanceSettings AlgoStoreInstanceBalanceService { get; set; }
+        public BalancesServiceClientSettings BalancesServiceClient { get; set; }
     }
 }
