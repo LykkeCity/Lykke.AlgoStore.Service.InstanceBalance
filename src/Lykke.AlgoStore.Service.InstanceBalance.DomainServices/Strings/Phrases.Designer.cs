@@ -22,7 +22,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Phrases {
+    public class Phrases {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings.Phrases", typeof(Phrases).Assembly);
@@ -51,7 +51,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings {
         /// <summary>
         ///   Looks up a localized string similar to The instance must be Live to retrieve balances.
         /// </summary>
-        internal static string InstanceMustBeLive {
+        public static string InstanceMustBeLive {
             get {
                 return ResourceManager.GetString("InstanceMustBeLive", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Lykke.AlgoStore.Service.InstanceBalance.DomainServices.Strings {
         /// <summary>
         ///   Looks up a localized string similar to Wallet ID must have a value.
         /// </summary>
-        internal static string WalletIdEmpty {
+        public static string WalletIdEmpty {
             get {
                 return ResourceManager.GetString("WalletIdEmpty", resourceCulture);
             }
