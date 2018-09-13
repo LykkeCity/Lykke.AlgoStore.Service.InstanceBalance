@@ -1,4 +1,4 @@
 FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
 COPY . .
-ENTRYPOINT ["dotnet", "Lykke.Service.InstanceBalance.dll"]
+ENTRYPOINT ["dotnet", "Lykke.AlgoStore.Service.InstanceBalance.dll"]
